@@ -58,10 +58,6 @@ class UserProductIndex extends React.Component {
     } else if(plan.paymentFrequency === 12){
       nextDate = annualnextPaydate;
     }
-
-
-
-
     let monthsPaid = -1;
     if (date.getDate() < 3) {
       monthsPaid += 1;
@@ -71,14 +67,6 @@ class UserProductIndex extends React.Component {
 
       monthsPaid += 1;
     }
-
-    // calculating edge cases when a person starts subscription in the middle of the month
-    // let actualPaid;
-    // let countofdays;
-    // if (date.getDate() > 3) {
-    //   countofdays = (30 - date.getDate()) + 3;
-    //   actualPaid = ((plan.cost * countofdays) / 30);
-    // }
 
      let amountPaidThisYear;
      if (plan.paymentFrequency === 1){
@@ -140,7 +128,7 @@ class UserProductIndex extends React.Component {
               <li>
                 <div className="product-buttons">
                   <div>
-                    Cost: <strong>${plan.cost}</strong>
+                    Cost: <strong>{plan.cost}$</strong>
                   </div>
                   <div>
                     <Link to={`/userproducts/${userProduct._id}/plans/${plan._id}`} className="user-product-edit">Edit Plan</Link> | <button onClick={() => this.props.removePlan(plan._id)} className="user-product-delete">Delete Plan</button>
