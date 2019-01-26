@@ -140,7 +140,7 @@ class UserProductIndex extends React.Component {
               <li>
                 <div className="product-buttons">
                   <div>
-                    Cost: <strong>{plan.cost}</strong>
+                    Cost: <strong>${plan.cost}</strong>
                   </div>
                   <div>
                     <Link to={`/userproducts/${userProduct._id}/plans/${plan._id}`} className="user-product-edit">Edit Plan</Link> | <button onClick={() => this.props.removePlan(plan._id)} className="user-product-delete">Delete Plan</button>
