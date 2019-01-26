@@ -1,6 +1,6 @@
 # es-correcto
 
-[Live Site](https://homelissa.github.io/es-correcto/#/)
+[Live Site](https://sandzu.github.io/es-correcto-branch/index.html)
 
 ## Background and Overview
 Es-correcto is a web application designed to assist users in managing their subscriptions.
